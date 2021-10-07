@@ -4,7 +4,7 @@
       <el-popover
         placement="top-start"
         title="Gym"
-        width="500"
+        width="380"
         trigger="hover"
         content="The first floor of the Beaurepaire Centre.">
         <div style="width:350px;height:200px;margin:auto">
@@ -30,15 +30,17 @@ export default {
 .bg_contanier {
   width: 100%;
   height: 100%;
+  position: relative;
+
 }
 .bg_img {
-  position: relative;
-  transform: scale(0.8);
+  width: 100%;
+  height: 100%;
 }
 .site1_button {
     position: absolute;
-    right: 22%;
-    top: 90%;
+    right: 16%;
+    top: 10%;
     border: none;
 }
 .img_site1{
