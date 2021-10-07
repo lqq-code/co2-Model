@@ -15,6 +15,10 @@
         width="380"
         trigger="click"
         content="The first floor of the Beaurepaire Centre.">
+        <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
+          <el-tab-pane label="July" name="first">July的数据</el-tab-pane>
+          <el-tab-pane label="August" name="second">August的数据</el-tab-pane>
+        </el-tabs>
         <div class="siteimg">
         <img src="../assets/images/site1.png" style="width:100%;height:100%;object-fit: cover;" />
         </div>
@@ -193,9 +197,5 @@ export default {
 .site6_button{
     left: 25%;
     bottom: 36%;
-
 }
-
-
-
 </style>
