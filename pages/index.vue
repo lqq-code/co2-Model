@@ -8,29 +8,21 @@
             <span slot="title" @click="handleButtonShow1">Site1 - GYM</span>
           </el-menu-item>
           <el-menu-item index="2">
-            <span slot="title">Site2 - David Derham Lecture Theatre</span>
+            <span slot="title" @click="handleButtonShow2">Site2 - David Derham Lecture Theatre</span>
           </el-menu-item>
           <el-menu-item index="3">
-            <span slot="title">Site3 - Union House</span>
+            <span slot="title" @click="handleButtonShow3">Site3 - Union House</span>
           </el-menu-item>
           <el-menu-item index="4">
-            <span slot="title">Site4 - Chemistry laboratory</span>
+            <span slot="title" @click="handleButtonShow4">Site4 - Chemistry laboratory</span>
           </el-menu-item>
           <el-menu-item index="5">
-            <span slot="title">Site5 - McCoy Building</span>
+            <span slot="title" @click="handleButtonShow5">Site5 - McCoy Building</span>
           </el-menu-item>
           <el-menu-item index="6">
-            <span slot="title">Site6 -  Alan Gilbert PAR</span>
+            <span slot="title" @click="handleButtonShow6">Site6 -  Alan Gilbert PAR</span>
           </el-menu-item>
         </el-menu>
-        <!-- <div class="button_list">
-          <el-button type="primary" @click="handleButtonShow1">site1</el-button>
-          <el-button type="primary" @click="handleButtonShow2">site2</el-button>
-          <el-button type="primary" @click="handleButtonShow3">site3</el-button>
-          <el-button type="primary" @click="handleButtonShow4">site4</el-button>
-          <el-button type="primary" @click="handleButtonShow5">site5</el-button>
-          <el-button type="primary" @click="handleButtonShow6">site6</el-button>
-        </div> -->
       </el-aside>
       <el-main class="main-item">
         <div class="div-img">
@@ -78,8 +70,29 @@
             width="380"
             trigger="click"
             content="The first floor of the Beaurepaire Centre.">
-            <div class="siteimg">
-            <img src="../assets/images/site2.png"  style="width:100%;height:100%;object-fit:contain;" />
+            <div class="data-item">
+              <el-table
+                ref="singleTable"
+                :data="tableData"
+                highlight-current-row
+                @current-change="handleCurrentChange"
+                style="width: 100%">
+                <el-table-column
+                  property="name"
+                  label="Name"
+                  width="140">
+                </el-table-column>
+                <el-table-column
+                  property="average"
+                  label="Average"
+                  width="120">
+                </el-table-column>
+                <el-table-column
+                  property="maximum"
+                  label="Maximum"
+                  width="120">
+                </el-table-column>
+              </el-table>
             </div>
             <el-button icon="el-icon-location" slot="reference"
             :style="{
@@ -94,8 +107,29 @@
             width="380"
             trigger="click"
             content="The first floor of the Beaurepaire Centre.">
-            <div class="siteimg">
-            <img src="../assets/images/site3.png"  style="width:100%;height:100%;object-fit:contain;" />
+            <div class="data-item">
+              <el-table
+                ref="singleTable"
+                :data="tableData"
+                highlight-current-row
+                @current-change="handleCurrentChange"
+                style="width: 100%">
+                <el-table-column
+                  property="name"
+                  label="Name"
+                  width="140">
+                </el-table-column>
+                <el-table-column
+                  property="average"
+                  label="Average"
+                  width="120">
+                </el-table-column>
+                <el-table-column
+                  property="maximum"
+                  label="Maximum"
+                  width="120">
+                </el-table-column>
+              </el-table>
             </div>
             <el-button icon="el-icon-location" slot="reference"
             :style="{
@@ -110,8 +144,29 @@
             width="380"
             trigger="click"
             content="The first floor of the Beaurepaire Centre.">
-            <div class="siteimg">
-            <img src="../assets/images/site4.png"  style="width:100%;height:100%;object-fit:contain;" />
+            <div class="data-item">
+              <el-table
+                ref="singleTable"
+                :data="tableData"
+                highlight-current-row
+                @current-change="handleCurrentChange"
+                style="width: 100%">
+                <el-table-column
+                  property="name"
+                  label="Name"
+                  width="140">
+                </el-table-column>
+                <el-table-column
+                  property="average"
+                  label="Average"
+                  width="120">
+                </el-table-column>
+                <el-table-column
+                  property="maximum"
+                  label="Maximum"
+                  width="120">
+                </el-table-column>
+              </el-table>
             </div>
             <el-button icon="el-icon-location" slot="reference"
             :style="{
@@ -126,8 +181,29 @@
             width="380"
             trigger="click"
             content="The first floor of the Beaurepaire Centre.">
-            <div class="siteimg">
-            <img src="../assets/images/site5.png"  style="width:100%;height:100%;object-fit:contain;" />
+            <div class="data-item">
+              <el-table
+                ref="singleTable"
+                :data="tableData"
+                highlight-current-row
+                @current-change="handleCurrentChange"
+                style="width: 100%">
+                <el-table-column
+                  property="name"
+                  label="Name"
+                  width="140">
+                </el-table-column>
+                <el-table-column
+                  property="average"
+                  label="Average"
+                  width="120">
+                </el-table-column>
+                <el-table-column
+                  property="maximum"
+                  label="Maximum"
+                  width="120">
+                </el-table-column>
+              </el-table>
             </div>
             <el-button icon="el-icon-location" slot="reference"
             :style="{
@@ -142,8 +218,29 @@
             width="380"
             trigger="click"
             content="The first floor of the Beaurepaire Centre.">
-            <div class="siteimg">
-            <img src="../assets/images/site6.png"  style="width:100%;height:100%;object-fit:contain;" />
+             <div class="data-item">
+              <el-table
+                ref="singleTable"
+                :data="tableData"
+                highlight-current-row
+                @current-change="handleCurrentChange"
+                style="width: 100%">
+                <el-table-column
+                  property="name"
+                  label="Name"
+                  width="140">
+                </el-table-column>
+                <el-table-column
+                  property="average"
+                  label="Average"
+                  width="120">
+                </el-table-column>
+                <el-table-column
+                  property="maximum"
+                  label="Maximum"
+                  width="120">
+                </el-table-column>
+              </el-table>
             </div>
             <el-button icon="el-icon-location" slot="reference"
             :style="{
@@ -256,24 +353,29 @@ export default {
     animation: shake 800ms ease-in-out;
 }
 .site2_button{
-    left: 34%;
-    bottom: 10%;
+    left: 52%;
+    bottom: 39%;
+    animation: shake 800ms ease-in-out;
 }
 .site3_button{
-    left: 34%;
-    top: 21%;
+    left: 51%;
+    top: 19%;
+    animation: shake 800ms ease-in-out;
 }
 .site4_button{
-    left: 47%;
-    top: 32%;
+    left: 58%;
+    top: 24%;
+    animation: shake 800ms ease-in-out;
 }
 .site5_button{
-    right: 22%;
-    top: 17%;
+    right: 20%;
+    top: 18%;
+    animation: shake 800ms ease-in-out;
 }
 .site6_button{
-    left: 25%;
-    bottom: 36%;
+    left: 46%;
+    bottom: 55%;
+    animation: shake 800ms ease-in-out;
 }
 @keyframes shake {
   0%,90% {
