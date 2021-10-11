@@ -1,27 +1,58 @@
 <template>
   <div class="bg_contanier">
     <el-container>
-      <!-- <el-header></el-header> -->
       <el-aside class="aside-item">
         <el-menu >
           <el-menu-item index="1">
+             <i class="el-icon-location"></i>
             <span slot="title" @click="handleButtonShow1">Site1 - GYM</span>
           </el-menu-item>
           <el-menu-item index="2">
+             <i class="el-icon-location"></i>
             <span slot="title" @click="handleButtonShow2">Site2 - David Derham Lecture Theatre</span>
           </el-menu-item>
           <el-menu-item index="3">
+             <i class="el-icon-location"></i>
             <span slot="title" @click="handleButtonShow3">Site3 - Union House</span>
           </el-menu-item>
           <el-menu-item index="4">
+             <i class="el-icon-location"></i>
             <span slot="title" @click="handleButtonShow4">Site4 - Chemistry laboratory</span>
           </el-menu-item>
           <el-menu-item index="5">
+             <i class="el-icon-location"></i>
             <span slot="title" @click="handleButtonShow5">Site5 - McCoy Building</span>
           </el-menu-item>
           <el-menu-item index="6">
+             <i class="el-icon-location"></i>
             <span slot="title" @click="handleButtonShow6">Site6 -  Alan Gilbert PAR</span>
           </el-menu-item>
+        </el-menu>
+        <el-menu
+              class="menu-history">
+              <el-submenu index="1">
+                <template slot="title">
+                  <i class="el-icon-notebook-2"></i>
+                  <span>Historical Data</span>
+                </template>
+                <el-menu-item-group>
+                  <el-menu-item index="1-1">
+                    <i class="el-icon-date"></i>May
+                  </el-menu-item>
+                  <el-menu-item index="1-2">
+                    <i class="el-icon-date"></i>June
+                  </el-menu-item>
+                  <el-menu-item index="1-3">
+                    <i class="el-icon-date"></i>July
+                  </el-menu-item>
+                  <el-menu-item index="1-4">
+                    <i class="el-icon-date"></i>August
+                  </el-menu-item>
+                  <el-menu-item index="1-5">
+                    <i class="el-icon-date"></i>September
+                  </el-menu-item>
+                </el-menu-item-group>
+              </el-submenu>
         </el-menu>
       </el-aside>
       <el-main class="main-item">
@@ -38,7 +69,6 @@
                 ref="singleTable"
                 :data="tableData"
                 highlight-current-row
-                @current-change="handleCurrentChange"
                 style="width: 100%">
                 <el-table-column
                   property="name"
@@ -75,7 +105,6 @@
                 ref="singleTable"
                 :data="tableData"
                 highlight-current-row
-                @current-change="handleCurrentChange"
                 style="width: 100%">
                 <el-table-column
                   property="name"
@@ -112,7 +141,6 @@
                 ref="singleTable"
                 :data="tableData"
                 highlight-current-row
-                @current-change="handleCurrentChange"
                 style="width: 100%">
                 <el-table-column
                   property="name"
@@ -137,7 +165,6 @@
               }"
             class="showbutton site3_button"></el-button>
           </el-popover>
-
           <el-popover
             placement="top-start"
             title="Chemistry laboratory (Chemistry building)"
@@ -149,7 +176,6 @@
                 ref="singleTable"
                 :data="tableData"
                 highlight-current-row
-                @current-change="handleCurrentChange"
                 style="width: 100%">
                 <el-table-column
                   property="name"
@@ -186,7 +212,6 @@
                 ref="singleTable"
                 :data="tableData"
                 highlight-current-row
-                @current-change="handleCurrentChange"
                 style="width: 100%">
                 <el-table-column
                   property="name"
@@ -223,7 +248,6 @@
                 ref="singleTable"
                 :data="tableData"
                 highlight-current-row
-                @current-change="handleCurrentChange"
                 style="width: 100%">
                 <el-table-column
                   property="name"
@@ -290,7 +314,7 @@ export default {
         average:'xxx',
         maximum:'xx'
         },
-      ]
+      ],
     };
   },
   computed: {},
@@ -333,11 +357,13 @@ export default {
 .main-item{
   padding: 0;
 }
+.menu-history{
+  margin-top: 100px;
+}
 .bg_img {
   width: 100%;
   height: 100%;
   transform: scale(0.8);
-  /* filter: grayscale(1); */
 }
 .data-item{
 }
