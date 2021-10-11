@@ -35,42 +35,42 @@
       <el-main class="main-item">
         <div class="div-img">
         <img src="../assets/images/bg.png" class="bg_img" >
-          <el-drawer
-            title="GYM"
-            :visible.sync="drawer"
-            :direction="direction"
-            size="50%"
-            >
-            <Site1 />
-          </el-drawer>
-          <el-button
-              @click="drawer = true"
-              icon="el-icon-location"
-              slot="reference"
-              :style="{
-                display: isShow1 ? '' : 'none'
-              }"
-              class="showbutton site1_button">
-          </el-button>
-          <!-- <el-popover
+          <el-popover
             placement="top-start"
             title="Gym (The first floor of the Beaurepaire Centre)"
-            width="380"
+            width="390"
             trigger="click"
             content="The first floor of the Beaurepaire Centre.">
-            <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
-              <el-tab-pane label="July" name="first">July的数据</el-tab-pane>
-              <el-tab-pane label="August" name="second">August的数据</el-tab-pane>
-            </el-tabs>
-            <div class="siteimg">
-            <img src="../assets/images/site1.png" style="width:100%;height:100%;object-fit: cover;" />
+            <div class="data-item">
+              <el-table
+                ref="singleTable"
+                :data="tableData"
+                highlight-current-row
+                @current-change="handleCurrentChange"
+                style="width: 100%">
+                <el-table-column
+                  property="name"
+                  label="Name"
+                  width="140">
+                </el-table-column>
+                <el-table-column
+                  property="average"
+                  label="Average"
+                  width="120">
+                </el-table-column>
+                <el-table-column
+                  property="maximum"
+                  label="Maximum"
+                  width="120">
+                </el-table-column>
+              </el-table>
             </div>
             <el-button icon="el-icon-location" slot="reference"
               :style="{
                 display: isShow1 ? '' : 'none'
               }"
             class="showbutton site1_button"></el-button>
-          </el-popover> -->
+          </el-popover>
 
           <el-popover
             placement="top-start"
@@ -171,7 +171,29 @@ export default {
       isShow4: false,
       isShow5: false,
       isShow6: false,
-      direction: 'rtl'
+      direction: 'rtl',
+      tableData:[
+        {
+        name:'co2 concentration',
+        average:'xxx',
+        maximum:'xx'
+        },
+        {
+        name:'mask efficienncy',
+        average:'xxx',
+        maximum:'xx'
+        },
+        {
+        name:'occpuants',
+        average:'xxx',
+        maximum:'xx'
+        },
+        {
+        name:'covid-risk',
+        average:'xxx',
+        maximum:'xx'
+        },
+      ]
     };
   },
   computed: {},
@@ -220,10 +242,7 @@ export default {
   transform: scale(0.8);
   /* filter: grayscale(1); */
 }
-.siteimg{
-  width:350px;
-  height:200px;
-  margin:auto
+.data-item{
 }
 .showbutton{
   position: absolute;
