@@ -29,6 +29,7 @@
           </el-menu-item>
         </el-menu>
         <el-menu
+              router
               class="menu-history">
               <el-submenu index="1">
                 <template slot="title">
@@ -36,9 +37,11 @@
                   <span>Historical Data</span>
                 </template>
                 <el-menu-item-group>
-                  <el-menu-item index="1-1">
+                  <nuxt-link :to="'/may'">
+                  <el-menu-item >
                     <i class="el-icon-date"></i>May
                   </el-menu-item>
+                    </nuxt-link>
                   <el-menu-item index="1-2">
                     <i class="el-icon-date"></i>June
                   </el-menu-item>
@@ -280,9 +283,8 @@
 </template>
 
 <script>
-import Site1 from '@/components/site1';
 export default {
-  components: {Site1},
+  components: {},
   data() {
     return {
       drawer: false,
@@ -343,6 +345,12 @@ export default {
 <style scope>
 .el-menu{
   border:none;
+}
+.el-menu-item-group__title{
+  padding:0;
+}
+a {
+  text-decoration: none;
 }
 .bg_contanier {
   width: 100%;
