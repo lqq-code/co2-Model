@@ -37,7 +37,7 @@
                   <span>Historical Data</span>
                 </template>
                 <el-menu-item-group>
-                  <nuxt-link :to="'/site2'">
+                  <nuxt-link :to="'./site2'">
                   <el-menu-item >
                     <i class="el-icon-date"></i>David Derham Lecture Theatre
                   </el-menu-item>

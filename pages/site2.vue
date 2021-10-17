@@ -1,6 +1,7 @@
 <template>
-  <div class="site1_contanier">
+  <div class="site2_contanier">
     <div id="myChart"></div>
+    <div id="myChart2"></div>
   </div>
 </template>
 
@@ -17,7 +18,6 @@ export default {
       // 找到容器
       let myChart = this.$echarts.init(document.getElementById('myChart'))
       $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/all_json.json', function(_rawData) {
-        console.log('_rawData', _rawData)
         let timeKey = Object.keys(_rawData.Max)
         let timeValue = Object.values(_rawData.Max)
         let timeTemp = []
@@ -25,7 +25,6 @@ export default {
           timeTemp.push(moment(parseInt(timeKey[i])).format('YYYY-MM-DD HH:mm:ss'))
         }
         // 开始渲染
-
         myChart.setOption({
           animationDuration: 10000,
           title: { text: 'David Derham Lecture Theatre' },
@@ -42,7 +41,7 @@ export default {
             data: timeTemp,
             boundaryGap: [0, '100%']
           },
-          yAxis: { name: 'co2' },
+          yAxis: { name: 'Co2' },
           toolbox: {
             right: 10,
             feature: {
@@ -97,6 +96,127 @@ export default {
           ]
         })
       })
+      let myChart2 = this.$echarts.init(document.getElementById('myChart2'))
+      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/all_json.json', function(_rawData) {
+        const colors = ['#5470C6', '#EE6666']
+        let timeKey = Object.keys(_rawData.N)
+        let timeValue = Object.values(_rawData.N)
+        let timeTemp = []
+        let timeValue2
+        for (let i = 0; i < timeKey.length; i++) {
+          timeTemp.push(moment(parseInt(timeKey[i])).format('YYYY-MM-DD HH:mm:ss'))
+        }
+        $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/all_json.json', function(_rawData2) {
+          console.log('_rawData2', _rawData2)
+          let timeKey2 = Object.keys(_rawData.N)
+          timeValue2 = Object.values(_rawData.N)
+          let timeTemp2 = []
+          for (let i = 0; i < timeKey2.length; i++) {
+            timeTemp2.push(moment(parseInt(timeKey2[i])).format('YYYY-MM-DD HH:mm:ss'))
+          }
+          console.log('timeKey2', timeKey2)
+
+          console.log('timeTemp2', timeTemp2)
+        })
+        // 开始渲染
+        myChart2.setOption({
+          color: colors,
+          animationDuration: 10000,
+          tooltip: {
+            trigger: 'none',
+            axisPointer: {
+              type: 'cross'
+            }
+          },
+          legend: {},
+          xAxis: {
+            data: timeTemp,
+            boundaryGap: [0, '100%']
+          },
+          yAxis: { name: 'Occupancy' },
+          toolbox: {
+            right: 10,
+            feature: {
+              dataZoom: {
+                yAxisIndex: 'none'
+              },
+              restore: {},
+              saveAsImage: {}
+            }
+          },
+
+          dataZoom: [
+            {
+              startValue: '2014-06-01'
+            },
+            {
+              type: 'inside'
+            }
+          ],
+          series: [
+            {
+              name: 'Occupancy',
+              type: 'line',
+              data: timeValue,
+              smooth: true,
+              emphasis: {
+                focus: 'series'
+              },
+              markLine: {
+                silent: true,
+                lineStyle: {
+                  color: '#5470C6'
+                },
+                data: [
+                  {
+                    yAxis: 30
+                  },
+                  {
+                    yAxis: 60
+                  },
+                  {
+                    yAxis: 90
+                  },
+                  {
+                    yAxis: 120
+                  },
+                  {
+                    yAxis: 150
+                  }
+                ]
+              }
+            },
+            {
+              name: 'Occupancy_true',
+              type: 'line',
+              data: timeValue2,
+              markLine: {
+                silent: true,
+                lineStyle: {
+                  color: '#EE6666'
+                },
+                data: [
+                  {
+                    yAxis: 30
+                  },
+                  {
+                    yAxis: 60
+                  },
+                  {
+                    yAxis: 90
+                  },
+                  {
+                    yAxis: 120
+                  },
+                  {
+                    yAxis: 150
+                  }
+                ]
+              }
+            }
+          ]
+        })
+      })
     }
   },
   mounted() {
@@ -106,12 +226,20 @@ export default {
 </script>
 
 <style scope>
-.site1_contanier {
+.site2_contanier {
   padding-top: 50px;
 }
 #myChart {
   width: 100%;
   height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+}
+#myChart2 {
+  width: 100%;
+  height: 300px;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   float: left;
