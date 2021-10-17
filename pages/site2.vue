@@ -53,6 +53,7 @@ export default {
               saveAsImage: {}
             }
           },
+
           dataZoom: [
             {
               startValue: '2014-06-01'
@@ -105,6 +106,9 @@ export default {
 </script>
 
 <style scope>
+.site1_contanier {
+  padding-top: 50px;
+}
 #myChart {
   width: 100%;
   height: 300px;
