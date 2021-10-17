@@ -4,6 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
+    script: [{ src: 'https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js' }],
     title: 'co2',
     htmlAttrs: {
       lang: 'en'
@@ -21,7 +22,7 @@ export default {
   css: ['element-ui/lib/theme-chalk/index.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/element-ui', '~plugins/echarts'],
+  plugins: ['@/plugins/element-ui', '~plugins/echarts', '@/plugins/moments'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

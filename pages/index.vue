@@ -51,9 +51,11 @@
                   <el-menu-item index="1-4">
                     <i class="el-icon-date"></i>August
                   </el-menu-item>
+                   <nuxt-link :to="'/sep'">
                   <el-menu-item index="1-5">
                     <i class="el-icon-date"></i>September
                   </el-menu-item>
+                    </nuxt-link>
                 </el-menu-item-group>
               </el-submenu>
         </el-menu>

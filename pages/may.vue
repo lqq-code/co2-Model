@@ -1,6 +1,25 @@
 <template>
-  <div class="site1_contanier">
-    <div id="myChart"></div>
+  <div class="may_contanier">
+    <!-- <div id="may-item">
+      <img src="../assets/images/may1.png" class="img-may1" />
+      <img src="../assets/images/may1.png" class="img-may1" />
+    </div> -->
+    <div class="may-item">
+      <el-image :src="require('@/assets/images/may1.png')" class="img-may "></el-image>
+      <el-image :src="require('@/assets/images/may2.png')" class="img-may may-right"> </el-image>
+    </div>
+    <div class="may-item">
+      <el-image :src="require('@/assets/images/may3.png')" class="img-may"> </el-image>
+      <el-image :src="require('@/assets/images/may4.png')" class="img-may may-right"> </el-image>
+    </div>
+    <div class="may-item">
+      <el-image :src="require('@/assets/images/may5.png')" class="img-may"> </el-image>
+      <el-image :src="require('@/assets/images/may6.png')" class="img-may may-right"> </el-image>
+    </div>
+    <div class="may-item">
+      <el-image :src="require('@/assets/images/may7.png')" class="img-may"> </el-image>
+      <div class="img-may may-right"></div>
+    </div>
   </div>
 </template>
 
@@ -13,39 +32,23 @@ export default {
     }
   },
   computed: {},
-  methods: {
-    echartsInit() {
-      // 找到容器
-      let myChart = this.$echarts.init(document.getElementById('myChart'))
-      // 开始渲染
-      myChart.setOption({
-        title: { text: '我就试试' },
-        tooltip: {},
-        xAxis: {
-          data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
-        },
-        yAxis: {},
-        series: [
-          {
-            name: '销量',
-            type: 'bar',
-            data: [5, 20, 36, 10, 10, 20]
-          }
-        ]
-      })
-    }
-  },
-  mounted() {
-    this.echartsInit()
-  }
+  methods: {}
 }
 </script>
 <style scope>
-#myChart {
-  width: 600px;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  float: left;
+.may_contanier {
+  width: 100%;
+  height: 100%;
+}
+.may-item {
+  display: flex;
+  margin-top: 60px;
+}
+.img-may {
+  width: 50%;
+  margin-left: 4%;
+}
+.may-right {
+  margin-right: 4%;
 }
 </style>
