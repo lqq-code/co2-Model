@@ -16,9 +16,10 @@ export default {
     echartsInit() {
       // 找到容器
       let myChart = this.$echarts.init(document.getElementById('myChart'))
-      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/sep1.json', function(_rawData) {
-        let timeKey = Object.keys(_rawData.value)
-        let timeValue = Object.values(_rawData.value)
+      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/all_json.json', function(_rawData) {
+        console.log('_rawData', _rawData)
+        let timeKey = Object.keys(_rawData.Max)
+        let timeValue = Object.values(_rawData.Max)
         let timeTemp = []
         for (let i = 0; i < timeKey.length; i++) {
           timeTemp.push(moment(parseInt(timeKey[i])).format('YYYY-MM-DD HH:mm:ss'))
@@ -41,7 +42,7 @@ export default {
             data: timeTemp,
             boundaryGap: [0, '100%']
           },
-          yAxis: { boundaryGap: [0, '100%'], name: 'co2' },
+          yAxis: { name: 'co2' },
           toolbox: {
             right: 10,
             feature: {
@@ -75,10 +76,19 @@ export default {
                     yAxis: 400
                   },
                   {
-                    yAxis: 500
+                    yAxis: 600
                   },
                   {
-                    yAxis: 300
+                    yAxis: 800
+                  },
+                  {
+                    yAxis: 1000
+                  },
+                  {
+                    yAxis: 1200
+                  },
+                  {
+                    yAxis: 1400
                   }
                 ]
               }

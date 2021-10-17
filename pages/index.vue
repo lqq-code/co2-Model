@@ -37,9 +37,9 @@
                   <span>Historical Data</span>
                 </template>
                 <el-menu-item-group>
-                  <nuxt-link :to="'/may'">
+                  <nuxt-link :to="'/site2'">
                   <el-menu-item >
-                    <i class="el-icon-date"></i>May
+                    <i class="el-icon-date"></i>David Derham Lecture Theatre
                   </el-menu-item>
                     </nuxt-link>
                   <el-menu-item index="1-2">
@@ -52,7 +52,7 @@
                     <i class="el-icon-date"></i>August
                   </el-menu-item>
                    <nuxt-link :to="'/sep'">
-                  <el-menu-item index="1-5">
+                  <el-menu-item >
                     <i class="el-icon-date"></i>September
                   </el-menu-item>
                     </nuxt-link>
