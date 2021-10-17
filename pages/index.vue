@@ -2,62 +2,85 @@
   <div class="bg_contanier">
     <el-container>
       <el-aside class="aside-item">
-        <el-menu >
-          <el-menu-item index="1">
-             <i class="el-icon-location"></i>
-            <span slot="title" @click="handleButtonShow1">Site1 - GYM</span>
-          </el-menu-item>
-          <el-menu-item index="2">
-             <i class="el-icon-location"></i>
-            <span slot="title" @click="handleButtonShow2">Site2 - David Derham Lecture Theatre</span>
-          </el-menu-item>
-          <el-menu-item index="3">
-             <i class="el-icon-location"></i>
-            <span slot="title" @click="handleButtonShow3">Site3 - Union House</span>
-          </el-menu-item>
-          <el-menu-item index="4">
-             <i class="el-icon-location"></i>
-            <span slot="title" @click="handleButtonShow4">Site4 - Chemistry laboratory</span>
-          </el-menu-item>
-          <el-menu-item index="5">
-             <i class="el-icon-location"></i>
-            <span slot="title" @click="handleButtonShow5">Site5 - McCoy Building</span>
-          </el-menu-item>
-          <el-menu-item index="6">
-             <i class="el-icon-location"></i>
-            <span slot="title" @click="handleButtonShow6">Site6 -  Alan Gilbert PAR</span>
-          </el-menu-item>
-        </el-menu>
-        <el-menu
-              router
-              class="menu-history">
-              <el-submenu index="1">
-                <template slot="title">
-                  <i class="el-icon-notebook-2"></i>
-                  <span>Historical Data</span>
-                </template>
-                <el-menu-item-group>
-                  <nuxt-link :to="'./site2'">
+        <el-menu class="aside-menu">
+          <el-submenu index="1">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span slot="title" @click="handleButtonShow1">Site1 - GYM</span>
+              </template>
+              <el-menu-item-group>
+                <nuxt-link :to="'./site2'">
                   <el-menu-item >
-                    <i class="el-icon-date"></i>David Derham Lecture Theatre
+                    <i class="el-icon-date"></i>Historical Data
                   </el-menu-item>
-                    </nuxt-link>
-                  <el-menu-item index="1-2">
-                    <i class="el-icon-date"></i>June
-                  </el-menu-item>
-                  <el-menu-item index="1-3">
-                    <i class="el-icon-date"></i>July
-                  </el-menu-item>
-                  <el-menu-item index="1-4">
-                    <i class="el-icon-date"></i>August
-                  </el-menu-item>
-                   <nuxt-link :to="'/sep'">
+                </nuxt-link>
+              </el-menu-item-group>
+          </el-submenu>
+          <el-submenu index="2">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span slot="title" @click="handleButtonShow2">Site2 - David Derham Lecture Theatre</span>
+              </template>
+              <el-menu-item-group>
+                <nuxt-link :to="'./site2'">
                   <el-menu-item >
-                    <i class="el-icon-date"></i>September
+                    <i class="el-icon-date"></i>Historical Data
                   </el-menu-item>
-                    </nuxt-link>
-                </el-menu-item-group>
-              </el-submenu>
+                </nuxt-link>
+              </el-menu-item-group>
+          </el-submenu>
+          <el-submenu index="3">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span slot="title" @click="handleButtonShow3">Site3 - Union House</span>
+              </template>
+              <el-menu-item-group>
+                <nuxt-link :to="'./site2'">
+                  <el-menu-item >
+                    <i class="el-icon-date"></i>Historical Data
+                  </el-menu-item>
+                </nuxt-link>
+              </el-menu-item-group>
+          </el-submenu>
+          <el-submenu index="4">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span slot="title" @click="handleButtonShow4">Site4 - Chemistry laboratory</span>
+              </template>
+              <el-menu-item-group>
+                <nuxt-link :to="'./site2'">
+                  <el-menu-item >
+                    <i class="el-icon-date"></i>Historical Data
+                  </el-menu-item>
+                </nuxt-link>
+              </el-menu-item-group>
+          </el-submenu>
+          <el-submenu index="5">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span slot="title" @click="handleButtonShow5">Site5 - McCoy Building</span>
+              </template>
+              <el-menu-item-group>
+                <nuxt-link :to="'./site2'">
+                  <el-menu-item >
+                    <i class="el-icon-date"></i>Historical Data
+                  </el-menu-item>
+                </nuxt-link>
+              </el-menu-item-group>
+          </el-submenu>
+          <el-submenu index="6">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span slot="title" @click="handleButtonShow6">Site6 -  Alan Gilbert PAR</span>
+              </template>
+              <el-menu-item-group>
+                <nuxt-link :to="'./site2'">
+                  <el-menu-item >
+                    <i class="el-icon-date"></i>Historical Data
+                  </el-menu-item>
+                </nuxt-link>
+              </el-menu-item-group>
+          </el-submenu>
         </el-menu>
       </el-aside>
       <el-main class="main-item">
@@ -345,6 +368,7 @@ export default {
 };
 </script>
 <style scope>
+
 .el-menu{
   border:none;
 }
@@ -361,8 +385,12 @@ a {
   margin-top: -100px;
 }
 .aside-item{
-  width: 300px;
+  width: 340px;
   transform: scale(0.8);
+}
+.aside-menu{
+  width: 340px;
+  margin-top: 250px;
 }
 .main-item{
   padding: 0;

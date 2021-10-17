@@ -106,7 +106,7 @@ export default {
         for (let i = 0; i < timeKey.length; i++) {
           timeTemp.push(moment(parseInt(timeKey[i])).format('YYYY-MM-DD HH:mm:ss'))
         }
-        $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/all_json.json', function(_rawData2) {
+        $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/testt.json', function(_rawData2) {
           console.log('_rawData2', _rawData2)
           let timeKey2 = Object.keys(_rawData.N)
           timeValue2 = Object.values(_rawData.N)
@@ -161,58 +161,12 @@ export default {
               smooth: true,
               emphasis: {
                 focus: 'series'
-              },
-              markLine: {
-                silent: true,
-                lineStyle: {
-                  color: '#5470C6'
-                },
-                data: [
-                  {
-                    yAxis: 30
-                  },
-                  {
-                    yAxis: 60
-                  },
-                  {
-                    yAxis: 90
-                  },
-                  {
-                    yAxis: 120
-                  },
-                  {
-                    yAxis: 150
-                  }
-                ]
               }
             },
             {
               name: 'Occupancy_true',
               type: 'line',
-              data: timeValue2,
-              markLine: {
-                silent: true,
-                lineStyle: {
-                  color: '#EE6666'
-                },
-                data: [
-                  {
-                    yAxis: 30
-                  },
-                  {
-                    yAxis: 60
-                  },
-                  {
-                    yAxis: 90
-                  },
-                  {
-                    yAxis: 120
-                  },
-                  {
-                    yAxis: 150
-                  }
-                ]
-              }
+              data: timeValue2
             }
           ]
         })
