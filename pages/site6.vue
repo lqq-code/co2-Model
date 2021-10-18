@@ -1,7 +1,6 @@
 <template>
   <div class="site2_contanier">
     <div id="myChart"></div>
-    <div id="myChartR"></div>
     <div id="myChart2"></div>
   </div>
 </template>
@@ -18,7 +17,7 @@ export default {
     echartsInit() {
       // 找到容器
       let myChart = this.$echarts.init(document.getElementById('myChart'))
-      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/Final_david.json', function(_rawData) {
+      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/Fianl_janes.json', function(_rawData) {
         let timeKey = Object.keys(_rawData.Max)
         let timeValue = Object.values(_rawData.Max)
         let timeTemp = []
@@ -28,7 +27,7 @@ export default {
         // 开始渲染
         myChart.setOption({
           animationDuration: 10000,
-          title: { text: 'David Derham Lecture Theatre - Left' },
+          title: { text: 'Jane’s Office (PAR 104. 230)' },
           tooltip: {
             trigger: 'axis',
             axisPointer: {
@@ -42,7 +41,7 @@ export default {
             data: timeTemp,
             boundaryGap: [0, '100%']
           },
-          yAxis: { name: 'Co2' },
+          yAxis: { name: 'Co2', scale: true },
           toolbox: {
             right: 10,
             feature: {
@@ -77,93 +76,16 @@ export default {
                     yAxis: 400
                   },
                   {
-                    yAxis: 600
+                    yAxis: 450
                   },
                   {
-                    yAxis: 800
+                    yAxis: 500
                   },
                   {
-                    yAxis: 1000
-                  },
-                  {
-                    yAxis: 1200
-                  }
-                ]
-              }
-            }
-          ]
-        })
-      })
-      let myChartR = this.$echarts.init(document.getElementById('myChartR'))
-      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/Anotherdavid.json', function(_rawData) {
-        let timeKey = Object.keys(_rawData.Max)
-        let timeValue = Object.values(_rawData.Max)
-        let timeTemp = []
-        for (let i = 0; i < timeKey.length; i++) {
-          timeTemp.push(moment(parseInt(timeKey[i])).format('YYYY-MM-DD HH:mm:ss'))
-        }
-        // 开始渲染
-        myChartR.setOption({
-          animationDuration: 10000,
-          title: { text: 'David Derham Lecture Theatre - Right' },
-          tooltip: {
-            trigger: 'axis',
-            axisPointer: {
-              type: 'cross',
-              label: {
-                backgroundColor: '#6a7985'
-              }
-            }
-          },
-          xAxis: {
-            data: timeTemp,
-            boundaryGap: [0, '100%']
-          },
-          yAxis: { name: 'Co2' },
-          toolbox: {
-            right: 10,
-            feature: {
-              dataZoom: {
-                yAxisIndex: 'none'
-              },
-              restore: {},
-              saveAsImage: {}
-            }
-          },
-
-          dataZoom: [
-            {
-              startValue: '2014-06-01'
-            },
-            {
-              type: 'inside'
-            }
-          ],
-          series: [
-            {
-              name: 'co2',
-              type: 'line',
-              data: timeValue,
-              markLine: {
-                silent: true,
-                lineStyle: {
-                  color: '#333'
-                },
-                data: [
-                  {
-                    yAxis: 400
+                    yAxis: 550
                   },
                   {
                     yAxis: 600
-                  },
-                  {
-                    yAxis: 800
-                  },
-                  {
-                    yAxis: 1000
-                  },
-                  {
-                    yAxis: 1200
                   }
                 ]
               }
@@ -172,7 +94,7 @@ export default {
         })
       })
       let myChart2 = this.$echarts.init(document.getElementById('myChart2'))
-      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/Final_david.json', function(_rawData) {
+      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/Fianl_janes.json', function(_rawData) {
         const colors = ['#5470C6', '#EE6666']
         let timeKey = Object.keys(_rawData.N)
         let timeValue = Object.values(_rawData.N)
@@ -181,26 +103,17 @@ export default {
         for (let i = 0; i < timeKey.length; i++) {
           timeTemp.push(moment(parseInt(timeKey[i])).format('YYYY-MM-DD HH:mm:ss'))
         }
-        $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/testt.json', function(_rawData2) {
-          console.log('_rawData2', _rawData2)
-          let timeKey2 = Object.keys(_rawData.N)
-          timeValue2 = Object.values(_rawData.N)
-          let timeTemp2 = []
-          for (let i = 0; i < timeKey2.length; i++) {
-            timeTemp2.push(moment(parseInt(timeKey2[i])).format('YYYY-MM-DD HH:mm:ss'))
-          }
-          console.log('timeKey2', timeKey2)
-
-          console.log('timeTemp2', timeTemp2)
-        })
         // 开始渲染
         myChart2.setOption({
           color: colors,
           animationDuration: 10000,
           tooltip: {
-            trigger: 'none',
+            trigger: 'axis',
             axisPointer: {
-              type: 'cross'
+              type: 'cross',
+              label: {
+                backgroundColor: '#6a7985'
+              }
             }
           },
           legend: {},
@@ -236,12 +149,30 @@ export default {
               smooth: true,
               emphasis: {
                 focus: 'series'
+              },
+              markLine: {
+                silent: true,
+                lineStyle: {
+                  color: '#333'
+                },
+                data: [
+                  {
+                    yAxis: 2
+                  },
+                  {
+                    yAxis: 4
+                  },
+                  {
+                    yAxis: 6
+                  },
+                  {
+                    yAxis: 8
+                  },
+                  {
+                    yAxis: 10
+                  }
+                ]
               }
-            },
-            {
-              name: 'Occupancy_true',
-              type: 'line',
-              data: timeValue2
             }
           ]
         })
@@ -261,14 +192,6 @@ export default {
 #myChart {
   width: 100%;
   height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  float: left;
-}
-#myChartR {
-  width: 100%;
-  height: 300px;
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   float: left;

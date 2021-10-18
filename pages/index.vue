@@ -9,7 +9,7 @@
                 <span slot="title" @click="handleButtonShow1">Site1 - GYM</span>
               </template>
               <el-menu-item-group>
-                <nuxt-link :to="'./site2'">
+                <nuxt-link :to="'./site1'">
                   <el-menu-item >
                     <i class="el-icon-date"></i>Historical Data
                   </el-menu-item>
@@ -35,7 +35,7 @@
                 <span slot="title" @click="handleButtonShow3">Site3 - Union House</span>
               </template>
               <el-menu-item-group>
-                <nuxt-link :to="'./site2'">
+                <nuxt-link :to="'./site3'">
                   <el-menu-item >
                     <i class="el-icon-date"></i>Historical Data
                   </el-menu-item>
@@ -48,7 +48,7 @@
                 <span slot="title" @click="handleButtonShow4">Site4 - Chemistry laboratory</span>
               </template>
               <el-menu-item-group>
-                <nuxt-link :to="'./site2'">
+                <nuxt-link :to="'./site4'">
                   <el-menu-item >
                     <i class="el-icon-date"></i>Historical Data
                   </el-menu-item>
@@ -61,7 +61,7 @@
                 <span slot="title" @click="handleButtonShow5">Site5 - McCoy Building</span>
               </template>
               <el-menu-item-group>
-                <nuxt-link :to="'./site2'">
+                <nuxt-link :to="'./site5'">
                   <el-menu-item >
                     <i class="el-icon-date"></i>Historical Data
                   </el-menu-item>
@@ -74,7 +74,7 @@
                 <span slot="title" @click="handleButtonShow6">Site6 -  Alan Gilbert PAR</span>
               </template>
               <el-menu-item-group>
-                <nuxt-link :to="'./site2'">
+                <nuxt-link :to="'./site6'">
                   <el-menu-item >
                     <i class="el-icon-date"></i>Historical Data
                   </el-menu-item>
