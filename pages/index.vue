@@ -89,31 +89,30 @@
           <el-popover
             placement="top-start"
             title="Gym (The first floor of the Beaurepaire Centre)"
-            width="390"
+            width="500"
             trigger="click"
             content="The first floor of the Beaurepaire Centre.">
             <div class="data-item">
-              <el-table
-                ref="singleTable"
-                :data="tableData"
-                highlight-current-row
-                style="width: 100%">
-                <el-table-column
-                  property="name"
-                  label="Name"
-                  width="140">
-                </el-table-column>
-                <el-table-column
-                  property="average"
-                  label="Average"
-                  width="120">
-                </el-table-column>
-                <el-table-column
-                  property="maximum"
-                  label="Maximum"
-                  width="120">
-                </el-table-column>
-              </el-table>
+                <el-table
+                  :data="tableData"
+                  :span-method="objectSpanMethod"
+                  border
+                  style="width: 100%; margin-top: 20px">
+                  <el-table-column
+                    fixed
+                    prop="id"
+                    label="July"
+                    width="215">
+                  </el-table-column>
+                  <el-table-column
+                    prop="name"
+                    label="parameter">
+                  </el-table-column>
+                  <el-table-column
+                    prop="amount1"
+                    label="value">
+                  </el-table-column>
+                </el-table>
             </div>
             <el-button icon="el-icon-location" slot="reference"
               :style="{
@@ -320,32 +319,50 @@ export default {
       isShow5: false,
       isShow6: false,
       direction: 'rtl',
-      tableData:[
-        {
-        name:'co2 concentration',
-        average:'xxx',
-        maximum:'xx'
-        },
-        {
-        name:'mask efficienncy',
-        average:'xxx',
-        maximum:'xx'
-        },
-        {
-        name:'occpuants',
-        average:'xxx',
-        maximum:'xx'
-        },
-        {
-        name:'covid-risk',
-        average:'xxx',
-        maximum:'xx'
-        },
-      ],
+      tableData: [{
+              id: 'Normal period (7.1-7.15)',
+              name: 'Occupants',
+              amount1: '12.10',
+            }, {
+              id: 'Normal period (7.1-7.15)',
+              name: 'Average Co2 level',
+              amount1: '477.15',
+            }, {
+              id: 'Normal period (7.1-7.15)',
+              name: 'Average P',
+              amount1: '0.0015',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Occupants',
+              amount1: '5.28',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Average Co2 level',
+              amount1: '419.55',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Average P',
+              amount1: '0.00060',
+            }]
     };
   },
   computed: {},
   methods: {
+    objectSpanMethod({ row, column, rowIndex, columnIndex }) {
+        if (columnIndex === 0) {
+          if (rowIndex % 3 === 0) {
+            return {
+              rowspan: 3,
+              colspan: 1
+            };
+          } else {
+            return {
+              rowspan: 0,
+              colspan: 0
+            };
+          }
+        }
+    },
     handleButtonShow1() {
           this.isShow1 = !this.isShow1
     },
