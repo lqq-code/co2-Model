@@ -94,7 +94,7 @@
             content="The first floor of the Beaurepaire Centre.">
             <div class="data-item">
                 <el-table
-                  :data="tableData"
+                  :data="tableData1"
                   :span-method="objectSpanMethod"
                   border
                   style="width: 100%; margin-top: 20px">
@@ -124,30 +124,29 @@
           <el-popover
             placement="top-start"
             title="David Derham Lecture Theatre PAR 106"
-            width="380"
+            width="500"
             trigger="click"
             content="The first floor of the Beaurepaire Centre.">
             <div class="data-item">
               <el-table
-                ref="singleTable"
-                :data="tableData"
-                highlight-current-row
-                style="width: 100%">
-                <el-table-column
-                  property="name"
-                  label="Name"
-                  width="140">
-                </el-table-column>
-                <el-table-column
-                  property="average"
-                  label="Average"
-                  width="120">
-                </el-table-column>
-                <el-table-column
-                  property="maximum"
-                  label="Maximum"
-                  width="120">
-                </el-table-column>
+                  :data="tableData2"
+                  :span-method="objectSpanMethod"
+                  border
+                  style="width: 100%; margin-top: 20px">
+                  <el-table-column
+                    fixed
+                    prop="id"
+                    label="July"
+                    width="215">
+                  </el-table-column>
+                  <el-table-column
+                    prop="name"
+                    label="parameter">
+                  </el-table-column>
+                  <el-table-column
+                    prop="amount1"
+                    label="value">
+                  </el-table-column>
               </el-table>
             </div>
             <el-button icon="el-icon-location" slot="reference"
@@ -160,30 +159,29 @@
           <el-popover
             placement="top-start"
             title="Union House, Main Dining Room"
-            width="380"
+            width="500"
             trigger="click"
             content="The first floor of the Beaurepaire Centre.">
             <div class="data-item">
               <el-table
-                ref="singleTable"
-                :data="tableData"
-                highlight-current-row
-                style="width: 100%">
-                <el-table-column
-                  property="name"
-                  label="Name"
-                  width="140">
-                </el-table-column>
-                <el-table-column
-                  property="average"
-                  label="Average"
-                  width="120">
-                </el-table-column>
-                <el-table-column
-                  property="maximum"
-                  label="Maximum"
-                  width="120">
-                </el-table-column>
+                  :data="tableData2"
+                  :span-method="objectSpanMethod"
+                  border
+                  style="width: 100%; margin-top: 20px">
+                  <el-table-column
+                    fixed
+                    prop="id"
+                    label="July"
+                    width="215">
+                  </el-table-column>
+                  <el-table-column
+                    prop="name"
+                    label="parameter">
+                  </el-table-column>
+                  <el-table-column
+                    prop="amount1"
+                    label="value">
+                  </el-table-column>
               </el-table>
             </div>
             <el-button icon="el-icon-location" slot="reference"
@@ -195,30 +193,29 @@
           <el-popover
             placement="top-start"
             title="Chemistry laboratory (Chemistry building)"
-            width="380"
+            width="500"
             trigger="click"
             content="The first floor of the Beaurepaire Centre.">
             <div class="data-item">
               <el-table
-                ref="singleTable"
-                :data="tableData"
-                highlight-current-row
-                style="width: 100%">
-                <el-table-column
-                  property="name"
-                  label="Name"
-                  width="140">
-                </el-table-column>
-                <el-table-column
-                  property="average"
-                  label="Average"
-                  width="120">
-                </el-table-column>
-                <el-table-column
-                  property="maximum"
-                  label="Maximum"
-                  width="120">
-                </el-table-column>
+                  :data="tableData4"
+                  :span-method="objectSpanMethod"
+                  border
+                  style="width: 100%; margin-top: 20px">
+                  <el-table-column
+                    fixed
+                    prop="id"
+                    label="July"
+                    width="215">
+                  </el-table-column>
+                  <el-table-column
+                    prop="name"
+                    label="parameter">
+                  </el-table-column>
+                  <el-table-column
+                    prop="amount1"
+                    label="value">
+                  </el-table-column>
               </el-table>
             </div>
             <el-button icon="el-icon-location" slot="reference"
@@ -231,30 +228,29 @@
           <el-popover
             placement="top-start"
             title="Room 409 McCoy Building : PAR 200"
-            width="380"
+            width="500"
             trigger="click"
             content="The first floor of the Beaurepaire Centre.">
             <div class="data-item">
               <el-table
-                ref="singleTable"
-                :data="tableData"
-                highlight-current-row
-                style="width: 100%">
-                <el-table-column
-                  property="name"
-                  label="Name"
-                  width="140">
-                </el-table-column>
-                <el-table-column
-                  property="average"
-                  label="Average"
-                  width="120">
-                </el-table-column>
-                <el-table-column
-                  property="maximum"
-                  label="Maximum"
-                  width="120">
-                </el-table-column>
+                  :data="tableData5"
+                  :span-method="objectSpanMethod"
+                  border
+                  style="width: 100%; margin-top: 20px">
+                  <el-table-column
+                    fixed
+                    prop="id"
+                    label="July"
+                    width="215">
+                  </el-table-column>
+                  <el-table-column
+                    prop="name"
+                    label="parameter">
+                  </el-table-column>
+                  <el-table-column
+                    prop="amount1"
+                    label="value">
+                  </el-table-column>
               </el-table>
             </div>
             <el-button icon="el-icon-location" slot="reference"
@@ -267,30 +263,29 @@
           <el-popover
             placement="top-start"
             title="Room 230 (Janes Office) Alan Gilbert PAR 104"
-            width="380"
+            width="500"
             trigger="click"
             content="The first floor of the Beaurepaire Centre.">
              <div class="data-item">
               <el-table
-                ref="singleTable"
-                :data="tableData"
-                highlight-current-row
-                style="width: 100%">
-                <el-table-column
-                  property="name"
-                  label="Name"
-                  width="140">
-                </el-table-column>
-                <el-table-column
-                  property="average"
-                  label="Average"
-                  width="120">
-                </el-table-column>
-                <el-table-column
-                  property="maximum"
-                  label="Maximum"
-                  width="120">
-                </el-table-column>
+                  :data="tableData6"
+                  :span-method="objectSpanMethod"
+                  border
+                  style="width: 100%; margin-top: 20px">
+                  <el-table-column
+                    fixed
+                    prop="id"
+                    label="July"
+                    width="215">
+                  </el-table-column>
+                  <el-table-column
+                    prop="name"
+                    label="parameter">
+                  </el-table-column>
+                  <el-table-column
+                    prop="amount1"
+                    label="value">
+                  </el-table-column>
               </el-table>
             </div>
             <el-button icon="el-icon-location" slot="reference"
@@ -319,7 +314,7 @@ export default {
       isShow5: false,
       isShow6: false,
       direction: 'rtl',
-      tableData: [{
+      tableData1: [{
               id: 'Normal period (7.1-7.15)',
               name: 'Occupants',
               amount1: '12.10',
@@ -343,7 +338,132 @@ export default {
               id: 'Lockdown period (7.16-7.27)',
               name: 'Average P',
               amount1: '0.00060',
-            }]
+      }],
+      tableData2: [{
+              id: 'Normal period (7.1-7.15)',
+              name: 'Occupants',
+              amount1: '21.48',
+            }, {
+              id: 'Normal period (7.1-7.15)',
+              name: 'Average Co2 level',
+              amount1: '425.73',
+            }, {
+              id: 'Normal period (7.1-7.15)',
+              name: 'Average P',
+              amount1: '0.00010',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Occupants',
+              amount1: '9.20',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Average Co2 level',
+              amount1: '403.59',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Average P',
+              amount1: '0.000048',
+      }],
+      tableData3: [{
+              id: 'Normal period (7.1-7.15)',
+              name: 'Occupants',
+              amount1: '1.05',
+            }, {
+              id: 'Normal period (7.1-7.15)',
+              name: 'Average Co2 level',
+              amount1: '423.59',
+            }, {
+              id: 'Normal period (7.1-7.15)',
+              name: 'Average P',
+              amount1: '0.039',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Occupants',
+              amount1: '0.54',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Average Co2 level',
+              amount1: '410.76',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Average P',
+              amount1: '0.0009',
+      }],
+      tableData4: [{
+              id: 'Normal period (7.1-7.15)',
+              name: 'Occupants',
+              amount1: '1.58',
+            }, {
+              id: 'Normal period (7.1-7.15)',
+              name: 'Average Co2 level',
+              amount1: '418.73',
+            }, {
+              id: 'Normal period (7.1-7.15)',
+              name: 'Average P',
+              amount1: '0.0000016',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Occupants',
+              amount1: '1.14',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Average Co2 level',
+              amount1: '408.67',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Average P',
+              amount1: '0.0000071',
+      }],
+      tableData5: [{
+              id: 'Normal period (7.1-7.15)',
+              name: 'Occupants',
+              amount1: '0.086',
+            }, {
+              id: 'Normal period (7.1-7.15)',
+              name: 'Average Co2 level',
+              amount1: '435.77',
+            }, {
+              id: 'Normal period (7.1-7.15)',
+              name: 'Average P',
+              amount1: '0',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Occupants',
+              amount1: '0.035',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Average Co2 level',
+              amount1: '397.69',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Average P',
+              amount1: '0',
+      }],
+      tableData6: [{
+              id: 'Normal period (7.1-7.15)',
+              name: 'Occupants',
+              amount1: '0.27',
+            }, {
+              id: 'Normal period (7.1-7.15)',
+              name: 'Average Co2 level',
+              amount1: '430.83',
+            }, {
+              id: 'Normal period (7.1-7.15)',
+              name: 'Average P',
+              amount1: '0',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Occupants',
+              amount1: '0.18',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Average Co2 level',
+              amount1: '413.84',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Average P',
+              amount1: '0',
+      }]
     };
   },
   computed: {},
