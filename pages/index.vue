@@ -81,6 +81,19 @@
                 </nuxt-link>
               </el-menu-item-group>
           </el-submenu>
+           <el-submenu index="7">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span slot="title" @click="handleButtonShow6">Site7 -  Room 230 Alan Gilbert</span>
+              </template>
+              <el-menu-item-group>
+                <nuxt-link :to="'./site7'">
+                  <el-menu-item >
+                    <i class="el-icon-date"></i>Historical Data
+                  </el-menu-item>
+                </nuxt-link>
+              </el-menu-item-group>
+          </el-submenu>
         </el-menu>
       </el-aside>
       <el-main class="main-item">

@@ -2,6 +2,7 @@
   <div class="site2_contanier">
     <div id="myChart"></div>
     <div id="myChartP"></div>
+
     <div id="myChart2"></div>
   </div>
 </template>
@@ -18,7 +19,9 @@ export default {
     echartsInit() {
       // 找到容器
       let myChart = this.$echarts.init(document.getElementById('myChart'))
-      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/unihoused.json', function(_rawData) {
+      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/chemistry_teachinng_room.json', function(
+        _rawData
+      ) {
         let timeKey = Object.keys(_rawData.Max)
         let timeValue = Object.values(_rawData.Max)
         let timeTemp = []
@@ -28,7 +31,7 @@ export default {
         // 开始渲染
         myChart.setOption({
           animationDuration: 10000,
-          title: { text: 'Union House' },
+          title: { text: 'Room 230 Alan Gilbert' },
           tooltip: {
             trigger: 'axis',
             axisPointer: {
@@ -74,12 +77,6 @@ export default {
                 },
                 data: [
                   {
-                    yAxis: 300
-                  },
-                  {
-                    yAxis: 350
-                  },
-                  {
                     yAxis: 400
                   },
                   {
@@ -90,6 +87,9 @@ export default {
                   },
                   {
                     yAxis: 550
+                  },
+                  {
+                    yAxis: 600
                   }
                 ]
               }
@@ -98,7 +98,9 @@ export default {
         })
       })
       let myChartP = this.$echarts.init(document.getElementById('myChartP'))
-      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/unihoused.json', function(_rawData) {
+      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/chemistry_teachinng_room.json', function(
+        _rawData
+      ) {
         const colors = ['#5470C6', '#EE6666']
         let timeKey = Object.keys(_rawData.p)
         let timeValue = Object.values(_rawData.p)
@@ -159,16 +161,16 @@ export default {
                 },
                 data: [
                   {
-                    yAxis: 0.1
+                    yAxis: 0
                   },
                   {
-                    yAxis: 0.2
+                    yAxis: 0.0005
                   },
                   {
-                    yAxis: 0.3
+                    yAxis: 0.01
                   },
                   {
-                    yAxis: 0.4
+                    yAxis: 0.015
                   }
                 ]
               }
@@ -177,7 +179,9 @@ export default {
         })
       })
       let myChart2 = this.$echarts.init(document.getElementById('myChart2'))
-      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/unihoused.json', function(_rawData) {
+      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/chemistry_teachinng_room.json', function(
+        _rawData
+      ) {
         const colors = ['#5470C6', '#EE6666']
         let timeKey = Object.keys(_rawData.N)
         let timeValue = Object.values(_rawData.N)
@@ -239,19 +243,19 @@ export default {
                 },
                 data: [
                   {
-                    yAxis: 1
-                  },
-                  {
                     yAxis: 2
-                  },
-                  {
-                    yAxis: 3
                   },
                   {
                     yAxis: 4
                   },
                   {
-                    yAxis: 5
+                    yAxis: 6
+                  },
+                  {
+                    yAxis: 8
+                  },
+                  {
+                    yAxis: 10
                   }
                 ]
               }
