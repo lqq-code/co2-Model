@@ -6,6 +6,9 @@
           <div class="text">
            Study to Identify and Evaluate Areas with Poor Ventilation and Evaluate Risks posed by Airborne Transmission.
           </div>
+          <div class="text">
+           Course Name : Master of Environmental Science.
+          </div>
         </el-card>
         <el-menu class="aside-menu">
           <el-submenu index="1">
@@ -587,14 +590,19 @@ a {
 }
 .text{
   text-align: justify;
+  font-size: 18px;
+  line-height: 30px;
+  color:#074382;
+  margin-bottom: 10px;
 }
+
 .aside-item{
   width: 340px;
   transform: scale(0.8);
 }
 .aside-menu{
   width: 340px;
-  margin-top: 150px;
+  margin-top: 100px;
 }
 .main-item{
   padding: 0;
