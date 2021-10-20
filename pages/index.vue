@@ -247,7 +247,6 @@
             <div class="data-item">
               <el-table
                   :data="tableData42"
-                  :span-method="objectSpanMethod"
                   border
                   style="width: 100%; margin-top: 20px">
                   <el-table-column

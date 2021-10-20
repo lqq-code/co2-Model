@@ -42,7 +42,7 @@ export default {
             data: timeTemp,
             boundaryGap: [0, '100%']
           },
-          yAxis: { name: 'Co2', scale: true },
+          yAxis: { name: 'Co2 (in ppm)', scale: true },
           toolbox: {
             right: 10,
             feature: {
@@ -201,7 +201,7 @@ export default {
             data: timeTemp,
             boundaryGap: [0, '100%']
           },
-          yAxis: { name: 'Occupancy' },
+          yAxis: { name: 'Occupancy (per person)' },
           toolbox: {
             right: 10,
             feature: {
