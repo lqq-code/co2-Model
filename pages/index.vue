@@ -1,15 +1,10 @@
 <template>
   <div class="bg_contanier">
-    <el-container>
+     <div class="word">
+           To Identify and Evaluate Areas with Poor Ventilation and Evaluate Risks posed by Airborne Transmission.
+    </div>
+    <el-container style="margin:30px 0">
       <el-aside class="aside-item">
-        <el-card class="box-card">
-          <div class="text">
-           Study to Identify and Evaluate Areas with Poor Ventilation and Evaluate Risks posed by Airborne Transmission.
-          </div>
-          <div class="text">
-           Course Name : Master of Environmental Science.
-          </div>
-        </el-card>
         <el-menu class="aside-menu">
           <el-submenu index="1">
               <template slot="title">
@@ -588,16 +583,19 @@ a {
   position: relative;
   margin-top: -100px;
 }
-.text{
-  text-align: justify;
-  font-size: 18px;
+.word{
+  width: 100%;
+  position: absolute;
+  top: 7%;
+  text-align: center;
+  font-size: 20px;
   line-height: 30px;
   color:#074382;
-  margin-bottom: 10px;
 }
 
+
 .aside-item{
-  width: 340px;
+  width: 370px;
   transform: scale(0.8);
 }
 .aside-menu{
@@ -614,6 +612,7 @@ a {
   width: 100%;
   height: 100%;
   transform: scale(0.8);
+  margin-top: 20px;
 }
 .data-item{
 }
