@@ -588,16 +588,9 @@ a {
   position: absolute;
   top: 7%;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 30px;
   color:#074382;
-}
-.text{
-  text-align: center;
-  font-size: 18px;
-  line-height: 30px;
-  color:#074382;
-  margin-bottom: 10px;
 }
 
 .aside-item{
