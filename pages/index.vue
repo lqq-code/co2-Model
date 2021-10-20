@@ -2,6 +2,11 @@
   <div class="bg_contanier">
     <el-container>
       <el-aside class="aside-item">
+        <el-card class="box-card">
+          <div class="text">
+           Study to Identify and Evaluate Areas with Poor Ventilation and Evaluate Risks posed by Airborne Transmission.
+          </div>
+        </el-card>
         <el-menu class="aside-menu">
           <el-submenu index="1">
               <template slot="title">
@@ -58,7 +63,7 @@
           <el-submenu index="5">
               <template slot="title">
                 <i class="el-icon-location"></i>
-                <span slot="title" @click="handleButtonShow42">Site5 - Chemistry teachinng room</span>
+                <span slot="title" @click="handleButtonShow42">Site5 - Chemistry teaching room</span>
               </template>
               <el-menu-item-group>
                 <nuxt-link :to="'./site7'">
@@ -240,7 +245,7 @@
           </el-popover>
           <el-popover
             placement="top-start"
-            title="Chemistry teachinng room"
+            title="Chemistry teaching room"
             width="500"
             trigger="click"
             content="The first floor of the Beaurepaire Centre.">
@@ -367,7 +372,7 @@ export default {
               amount1: '12.10',
             }, {
               id: 'Normal period (7.1-7.15)',
-              name: 'Average Co2 level',
+              name: 'Average CO2 level',
               amount1: '477.15',
             }, {
               id: 'Normal period (7.1-7.15)',
@@ -379,7 +384,7 @@ export default {
               amount1: '5.28',
             }, {
               id: 'Lockdown period (7.16-7.27)',
-              name: 'Average Co2 level',
+              name: 'Average CO2 level',
               amount1: '419.55',
             }, {
               id: 'Lockdown period (7.16-7.27)',
@@ -392,7 +397,7 @@ export default {
               amount1: '21.48',
             }, {
               id: 'Normal period (7.1-7.15)',
-              name: 'Average Co2 level',
+              name: 'Average CO2 level',
               amount1: '425.73',
             }, {
               id: 'Normal period (7.1-7.15)',
@@ -404,7 +409,7 @@ export default {
               amount1: '9.20',
             }, {
               id: 'Lockdown period (7.16-7.27)',
-              name: 'Average Co2 level',
+              name: 'Average CO2 level',
               amount1: '403.59',
             }, {
               id: 'Lockdown period (7.16-7.27)',
@@ -417,7 +422,7 @@ export default {
               amount1: '1.05',
             }, {
               id: 'Normal period (7.1-7.15)',
-              name: 'Average Co2 level',
+              name: 'Average CO2 level',
               amount1: '423.59',
             }, {
               id: 'Normal period (7.1-7.15)',
@@ -429,7 +434,7 @@ export default {
               amount1: '0.54',
             }, {
               id: 'Lockdown period (7.16-7.27)',
-              name: 'Average Co2 level',
+              name: 'Average CO2 level',
               amount1: '410.76',
             }, {
               id: 'Lockdown period (7.16-7.27)',
@@ -442,7 +447,7 @@ export default {
               amount1: '1.58',
             }, {
               id: 'Normal period (7.1-7.15)',
-              name: 'Average Co2 level',
+              name: 'Average CO2 level',
               amount1: '418.73',
             }, {
               id: 'Normal period (7.1-7.15)',
@@ -454,7 +459,7 @@ export default {
               amount1: '1.14',
             }, {
               id: 'Lockdown period (7.16-7.27)',
-              name: 'Average Co2 level',
+              name: 'Average CO2 level',
               amount1: '408.67',
             }, {
               id: 'Lockdown period (7.16-7.27)',
@@ -476,7 +481,7 @@ export default {
               amount1: '0.086',
             }, {
               id: 'Normal period (7.1-7.15)',
-              name: 'Average Co2 level',
+              name: 'Average CO2 level',
               amount1: '435.77',
             }, {
               id: 'Normal period (7.1-7.15)',
@@ -488,7 +493,7 @@ export default {
               amount1: '0.035',
             }, {
               id: 'Lockdown period (7.16-7.27)',
-              name: 'Average Co2 level',
+              name: 'Average CO2 level',
               amount1: '397.69',
             }, {
               id: 'Lockdown period (7.16-7.27)',
@@ -501,7 +506,7 @@ export default {
               amount1: '0.27',
             }, {
               id: 'Normal period (7.1-7.15)',
-              name: 'Average Co2 level',
+              name: 'Average CO2 level',
               amount1: '430.83',
             }, {
               id: 'Normal period (7.1-7.15)',
@@ -513,7 +518,7 @@ export default {
               amount1: '0.18',
             }, {
               id: 'Lockdown period (7.16-7.27)',
-              name: 'Average Co2 level',
+              name: 'Average CO2 level',
               amount1: '413.84',
             }, {
               id: 'Lockdown period (7.16-7.27)',
@@ -580,13 +585,16 @@ a {
   position: relative;
   margin-top: -100px;
 }
+.text{
+  text-align: justify;
+}
 .aside-item{
   width: 340px;
   transform: scale(0.8);
 }
 .aside-menu{
   width: 340px;
-  margin-top: 250px;
+  margin-top: 150px;
 }
 .main-item{
   padding: 0;

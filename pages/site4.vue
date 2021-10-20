@@ -1,8 +1,8 @@
 <template>
   <div class="site2_contanier">
+    <el-page-header @back="goBack" content="Chemistry laboratory"> </el-page-header>
     <div id="myChart"></div>
     <div id="myChartP"></div>
-
     <div id="myChart2"></div>
   </div>
 </template>
@@ -16,6 +16,9 @@ export default {
   },
   computed: {},
   methods: {
+    goBack() {
+      window.history.go(-1)
+    },
     echartsInit() {
       // 找到容器
       let myChart = this.$echarts.init(document.getElementById('myChart'))
@@ -29,7 +32,6 @@ export default {
         // 开始渲染
         myChart.setOption({
           animationDuration: 10000,
-          title: { text: 'Chemistry laboratory' },
           tooltip: {
             trigger: 'axis',
             axisPointer: {
@@ -43,7 +45,7 @@ export default {
             data: timeTemp,
             boundaryGap: [0, '100%']
           },
-          yAxis: { name: 'Co2 (in ppm)', scale: true },
+          yAxis: { name: 'CO2 (in ppm)', scale: true },
           toolbox: {
             right: 10,
             feature: {
@@ -65,7 +67,7 @@ export default {
           ],
           series: [
             {
-              name: 'co2',
+              name: 'CO2',
               type: 'line',
               data: timeValue,
               markLine: {
@@ -125,7 +127,7 @@ export default {
             data: timeTemp,
             boundaryGap: [0, '100%']
           },
-          yAxis: { name: 'probability of infection' },
+          yAxis: { name: 'Probability of infection' },
           toolbox: {
             right: 10,
             feature: {

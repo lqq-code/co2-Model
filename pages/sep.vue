@@ -41,7 +41,7 @@ export default {
             data: timeTemp,
             boundaryGap: [0, '100%']
           },
-          yAxis: { boundaryGap: [0, '100%'], name: 'co2' },
+          yAxis: { boundaryGap: [0, '100%'], name: 'CO2' },
           toolbox: {
             right: 10,
             feature: {
@@ -62,7 +62,7 @@ export default {
           ],
           series: [
             {
-              name: 'co2',
+              name: 'CO2',
               type: 'line',
               data: timeValue,
               markLine: {

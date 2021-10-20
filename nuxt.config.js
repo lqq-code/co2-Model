@@ -5,7 +5,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     script: [{ src: 'https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js' }],
-    title: 'co2',
+    title: 'CO2',
     htmlAttrs: {
       lang: 'en'
     },
