@@ -3,7 +3,7 @@
      <div class="word">
            To Identify and Evaluate Areas with Poor Ventilation and Evaluate Risks posed by Airborne Transmission.
     </div>
-    <el-container style="margin:30px 0">
+    <el-container style="margin:20px 0 ">
       <el-aside class="aside-item">
         <el-menu class="aside-menu">
           <el-submenu index="1">
@@ -588,11 +588,17 @@ a {
   position: absolute;
   top: 7%;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 30px;
   color:#074382;
 }
-
+.text{
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+  color:#074382;
+  margin-bottom: 10px;
+}
 
 .aside-item{
   width: 370px;
@@ -612,7 +618,6 @@ a {
   width: 100%;
   height: 100%;
   transform: scale(0.8);
-  margin-top: 20px;
 }
 .data-item{
 }
