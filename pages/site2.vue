@@ -18,7 +18,7 @@ export default {
     echartsInit() {
       // 找到容器
       let myChart = this.$echarts.init(document.getElementById('myChart'))
-      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/Final_david.json', function(_rawData) {
+      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/davidnew.json', function(_rawData) {
         let timeKey = Object.keys(_rawData.Max)
         let timeValue = Object.values(_rawData.Max)
         let timeTemp = []
@@ -95,7 +95,7 @@ export default {
         })
       })
       let myChartR = this.$echarts.init(document.getElementById('myChartR'))
-      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/Anotherdavid.json', function(_rawData) {
+      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/davidnew.json', function(_rawData) {
         let timeKey = Object.keys(_rawData.Max)
         let timeValue = Object.values(_rawData.Max)
         let timeTemp = []
@@ -172,7 +172,7 @@ export default {
         })
       })
       let myChart2 = this.$echarts.init(document.getElementById('myChart2'))
-      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/Final_david.json', function(_rawData) {
+      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/davidnew.json', function(_rawData) {
         const colors = ['#5470C6', '#EE6666']
         let timeKey = Object.keys(_rawData.N)
         let timeValue = Object.values(_rawData.N)

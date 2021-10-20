@@ -31,7 +31,7 @@ export default {
         // 开始渲染
         myChart.setOption({
           animationDuration: 10000,
-          title: { text: 'Room 230 Alan Gilbert' },
+          title: { text: 'Chemistry teachinng room' },
           tooltip: {
             trigger: 'axis',
             axisPointer: {

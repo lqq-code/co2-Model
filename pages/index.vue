@@ -19,7 +19,7 @@
           <el-submenu index="2">
               <template slot="title">
                 <i class="el-icon-location"></i>
-                <span slot="title" @click="handleButtonShow2">Site2 - David Derham Lecture Theatre</span>
+                <span slot="title" @click="handleButtonShow2">Site2 - David Lecture Theatre</span>
               </template>
               <el-menu-item-group>
                 <nuxt-link :to="'./site2'">
@@ -45,7 +45,7 @@
           <el-submenu index="4">
               <template slot="title">
                 <i class="el-icon-location"></i>
-                <span slot="title" @click="handleButtonShow4">Site4 - Chemistry laboratory</span>
+                <span slot="title" @click="handleButtonShow4">Site4 - Chemistry LAB</span>
               </template>
               <el-menu-item-group>
                 <nuxt-link :to="'./site4'">
@@ -58,33 +58,7 @@
           <el-submenu index="5">
               <template slot="title">
                 <i class="el-icon-location"></i>
-                <span slot="title" @click="handleButtonShow5">Site5 - McCoy Building</span>
-              </template>
-              <el-menu-item-group>
-                <nuxt-link :to="'./site5'">
-                  <el-menu-item >
-                    <i class="el-icon-date"></i>Historical Data
-                  </el-menu-item>
-                </nuxt-link>
-              </el-menu-item-group>
-          </el-submenu>
-          <el-submenu index="6">
-              <template slot="title">
-                <i class="el-icon-location"></i>
-                <span slot="title" @click="handleButtonShow6">Site6 -  Alan Gilbert PAR</span>
-              </template>
-              <el-menu-item-group>
-                <nuxt-link :to="'./site6'">
-                  <el-menu-item >
-                    <i class="el-icon-date"></i>Historical Data
-                  </el-menu-item>
-                </nuxt-link>
-              </el-menu-item-group>
-          </el-submenu>
-           <el-submenu index="7">
-              <template slot="title">
-                <i class="el-icon-location"></i>
-                <span slot="title" @click="handleButtonShow6">Site7 -  Room 230 Alan Gilbert</span>
+                <span slot="title" @click="handleButtonShow42">Site5 - Chemistry teachinng room</span>
               </template>
               <el-menu-item-group>
                 <nuxt-link :to="'./site7'">
@@ -94,6 +68,33 @@
                 </nuxt-link>
               </el-menu-item-group>
           </el-submenu>
+          <el-submenu index="6">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span slot="title" @click="handleButtonShow5">Site6 - Room 409 McCoy Building</span>
+              </template>
+              <el-menu-item-group>
+                <nuxt-link :to="'./site5'">
+                  <el-menu-item >
+                    <i class="el-icon-date"></i>Historical Data
+                  </el-menu-item>
+                </nuxt-link>
+              </el-menu-item-group>
+          </el-submenu>
+          <el-submenu index="7">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span slot="title" @click="handleButtonShow6">Site7 -  Jane's Office</span>
+              </template>
+              <el-menu-item-group>
+                <nuxt-link :to="'./site6'">
+                  <el-menu-item >
+                    <i class="el-icon-date"></i>Historical Data
+                  </el-menu-item>
+                </nuxt-link>
+              </el-menu-item-group>
+          </el-submenu>
+
         </el-menu>
       </el-aside>
       <el-main class="main-item">
@@ -177,7 +178,7 @@
             content="The first floor of the Beaurepaire Centre.">
             <div class="data-item">
               <el-table
-                  :data="tableData2"
+                  :data="tableData3"
                   :span-method="objectSpanMethod"
                   border
                   style="width: 100%; margin-top: 20px">
@@ -205,7 +206,7 @@
           </el-popover>
           <el-popover
             placement="top-start"
-            title="Chemistry laboratory (Chemistry building)"
+            title="Chemistry LAB"
             width="500"
             trigger="click"
             content="The first floor of the Beaurepaire Centre.">
@@ -237,7 +238,40 @@
               }"
             class="showbutton site4_button"></el-button>
           </el-popover>
-
+          <el-popover
+            placement="top-start"
+            title="Chemistry teachinng room"
+            width="500"
+            trigger="click"
+            content="The first floor of the Beaurepaire Centre.">
+            <div class="data-item">
+              <el-table
+                  :data="tableData42"
+                  :span-method="objectSpanMethod"
+                  border
+                  style="width: 100%; margin-top: 20px">
+                  <el-table-column
+                    fixed
+                    prop="id"
+                    label="July"
+                    width="215">
+                  </el-table-column>
+                  <el-table-column
+                    prop="name"
+                    label="parameter">
+                  </el-table-column>
+                  <el-table-column
+                    prop="amount1"
+                    label="value">
+                  </el-table-column>
+              </el-table>
+            </div>
+            <el-button icon="el-icon-location" slot="reference"
+            :style="{
+                display: isShow42 ? '' : 'none'
+              }"
+            class="showbutton site42_button"></el-button>
+          </el-popover>
           <el-popover
             placement="top-start"
             title="Room 409 McCoy Building : PAR 200"
@@ -324,6 +358,7 @@ export default {
       isShow2: false,
       isShow3: false,
       isShow4: false,
+      isShow42: false,
       isShow5: false,
       isShow6: false,
       direction: 'rtl',
@@ -427,6 +462,15 @@ export default {
               name: 'Average P',
               amount1: '0.0000071',
       }],
+      tableData42: [{
+              id: 'Normal period (7.1-7.15)',
+              name: 'Occupants',
+              amount1: '2.95',
+            }, {
+              id: 'Lockdown period (7.16-7.27)',
+              name: 'Occupants',
+              amount1: '2.69',
+      }],
       tableData5: [{
               id: 'Normal period (7.1-7.15)',
               name: 'Occupants',
@@ -508,6 +552,9 @@ export default {
     handleButtonShow4() {
           this.isShow4 = !this.isShow4
     },
+     handleButtonShow42() {
+          this.isShow42 = !this.isShow42
+    },
     handleButtonShow5() {
           this.isShow5 = !this.isShow5
     },
@@ -579,6 +626,11 @@ a {
 .site4_button{
     left: 58%;
     top: 24%;
+    animation: shake 800ms ease-in-out;
+}
+.site42_button{
+    left: 60%;
+    top: 26%;
     animation: shake 800ms ease-in-out;
 }
 .site5_button{
