@@ -22,9 +22,7 @@ export default {
     echartsInit() {
       // 找到容器
       let myChart = this.$echarts.init(document.getElementById('myChart'))
-      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/final_gym_withoutmask.json', function(
-        _rawData
-      ) {
+      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/zgimLK/final_gym_withoutmask.json', function(_rawData) {
         let timeKey = Object.keys(_rawData.Max)
         let timeValue = Object.values(_rawData.Max)
         let timeTemp = []
@@ -101,9 +99,7 @@ export default {
       })
 
       let myChartP = this.$echarts.init(document.getElementById('myChartP'))
-      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/final_gym_withoutmask.json', function(
-        _rawData
-      ) {
+      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/zgimLK/final_gym_withoutmask.json', function(_rawData) {
         const colors = ['#5470C6', '#EE6666']
         let timeKey = Object.keys(_rawData.new_p)
         let timeValue = Object.values(_rawData.new_p)
@@ -182,9 +178,7 @@ export default {
         })
       })
       let myChart2 = this.$echarts.init(document.getElementById('myChart2'))
-      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/final_gym_withoutmask.json', function(
-        _rawData
-      ) {
+      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/zgimLK/final_gym_withoutmask.json', function(_rawData) {
         const colors = ['#5470C6', '#EE6666']
         let timeKey = Object.keys(_rawData.N)
         let timeValue = Object.values(_rawData.N)

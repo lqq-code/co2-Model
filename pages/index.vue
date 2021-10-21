@@ -97,7 +97,6 @@
                 </nuxt-link>
               </el-menu-item-group>
           </el-submenu>
-
         </el-menu>
       </el-aside>
       <el-main class="main-item">
