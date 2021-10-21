@@ -203,7 +203,7 @@ export default {
             data: timeTemp,
             boundaryGap: [0, '100%']
           },
-          yAxis: { name: 'Probability of infection (%) (%)' },
+          yAxis: { name: 'Probability of infection (%)' },
           toolbox: {
             right: 10,
             feature: {
