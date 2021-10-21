@@ -22,7 +22,7 @@ export default {
     echartsInit() {
       // 找到容器
       let myChart = this.$echarts.init(document.getElementById('myChart'))
-      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/final_maccoy.json', function(_rawData) {
+      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/zdG0Ga/final_maccoy.json', function(_rawData) {
         let timeKey = Object.keys(_rawData.Max)
         let timeValue = Object.values(_rawData.Max)
         let timeTemp = []
@@ -101,10 +101,10 @@ export default {
         })
       })
       let myChartP = this.$echarts.init(document.getElementById('myChartP'))
-      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/final_maccoy.json', function(_rawData) {
+      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/zdG0Ga/final_maccoy.json', function(_rawData) {
         const colors = ['#5470C6', '#EE6666']
-        let timeKey = Object.keys(_rawData.p)
-        let timeValue = Object.values(_rawData.p)
+        let timeKey = Object.keys(_rawData.new_p)
+        let timeValue = Object.values(_rawData.new_p)
         let timeTemp = []
         for (let i = 0; i < timeKey.length; i++) {
           timeTemp.push(moment(parseInt(timeKey[i])).format('YYYY-MM-DD HH:mm:ss'))
@@ -127,7 +127,7 @@ export default {
             data: timeTemp,
             boundaryGap: [0, '100%']
           },
-          yAxis: { name: 'Probability of infection' },
+          yAxis: { name: 'Probability of infection (%)' },
           toolbox: {
             right: 10,
             feature: {
@@ -180,7 +180,7 @@ export default {
         })
       })
       let myChart2 = this.$echarts.init(document.getElementById('myChart2'))
-      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/notarization/final_maccoy.json', function(_rawData) {
+      $.get('https://test-eagle.oss-cn-shenzhen.aliyuncs.com/zdG0Ga/final_maccoy.json', function(_rawData) {
         const colors = ['#5470C6', '#EE6666']
         let timeKey = Object.keys(_rawData.N)
         let timeValue = Object.values(_rawData.N)

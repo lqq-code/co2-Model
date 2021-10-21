@@ -1,7 +1,7 @@
 <template>
   <div class="bg_contanier">
-     <div class="word">
-           To Identify and Evaluate Areas with Poor Ventilation and Evaluate Risks posed by Airborne Transmission.
+    <div class="word">
+      To Identify and Evaluate Areas with Poor Ventilation and Evaluate Risks posed by Airborne Transmission.
     </div>
     <el-container style="margin:20px 0 ">
       <el-aside class="aside-item">
